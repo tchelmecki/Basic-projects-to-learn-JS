@@ -57,11 +57,14 @@ add.addEventListener('click',()=>{
         removeTask.textContent = '-';
         
         // taskDiv.textContent = taskText;
+        let removeBtn = document.createElement('button');
+        removeBtn.innerText = "x";
+        removeBtn.classList.add("remove-btn");
+        
 
         
         taskDiv.appendChild(checkbox);
         taskDiv.appendChild(label);
-        taskDiv.appendChild(removeTask);
         taskArea.appendChild(taskDiv);
         
         removeTask.addEventListener('click', ()=>{
@@ -69,5 +72,10 @@ add.addEventListener('click',()=>{
         })
 
         taskInput.value = '';
+
+        removeBtn.addEventListener('click', ()=>{
+            taskArea.removeChild(taskDiv);
+        })
     }
+    
 });
