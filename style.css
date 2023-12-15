@@ -29,6 +29,15 @@ p{
     border-radius: 10px;
     margin-bottom: 20px;
 }
+.textColor{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
 
 /*====================COUNTER====================*/
 .counterContainer{
@@ -136,9 +145,29 @@ p{
     padding-bottom: 10px;
     padding-left: 10px;
     font-size: 20px;
-    
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 .task label{
     padding-left: 5px;
 }
-
+.removeTask{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: .2s ease-in-out all;
+}
+.removeTask:hover{
+    background-color: rgb(225, 28, 28);
+    cursor: pointer;
+}

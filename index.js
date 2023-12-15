@@ -5,7 +5,10 @@ const colorContainer = document.querySelector('.colorContainer');
 
 function picker(e){
     const text = e.target.value;
-    colorContainer.style.backgroundColor = text;
+    const color = e.target.value;
+    colorContainer.innerHTML = text;
+    colorContainer.style.backgroundColor = color;
+    colorContainer.classList.add("textColor");
 }
 
 colorPicker.addEventListener('input',picker)
@@ -49,13 +52,21 @@ add.addEventListener('click',()=>{
         let taskDiv = document.createElement('div');
         taskDiv.classList.add('task');
         label.textContent = taskText;
+        const removeTask = document.createElement('button');
+        removeTask.classList.add('removeTask');
+        removeTask.textContent = '-';
+        
         // taskDiv.textContent = taskText;
 
         
         taskDiv.appendChild(checkbox);
         taskDiv.appendChild(label);
+        taskDiv.appendChild(removeTask);
         taskArea.appendChild(taskDiv);
         
+        removeTask.addEventListener('click', ()=>{
+            taskArea.removeChild(taskDiv);
+        })
 
         taskInput.value = '';
     }
