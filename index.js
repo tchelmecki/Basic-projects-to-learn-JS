@@ -65,6 +65,7 @@ add.addEventListener('click',()=>{
         
         taskDiv.appendChild(checkbox);
         taskDiv.appendChild(label);
+        taskDiv.appendChild(removeBtn);
         taskArea.appendChild(taskDiv);
         
         removeTask.addEventListener('click', ()=>{

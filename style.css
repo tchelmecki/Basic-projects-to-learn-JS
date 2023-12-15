@@ -41,6 +41,20 @@ nav p{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.repository{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.repository a{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 3px;
+}
+.icon-github{
+    font-size: 30px;
+    color: #fff;
+}
 
 p{
     font-size: 20px;
@@ -125,7 +139,7 @@ p{
 
 .containerToDoList{
     width: 400px;
-    height: 400px;
+    height: 350px;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -141,6 +155,8 @@ p{
     align-content: center;
     position: sticky;
     top:0;
+    z-index: 2;
+
 }
 .enterSth input{
     width: 90%;
@@ -149,7 +165,8 @@ p{
     padding-left: 10px;
     color: white;
     font-size: 20px;
-    
+    overflow: hidden;
+
 }
 .enterSth input::placeholder{
     color: white;
@@ -171,7 +188,7 @@ p{
     font-size: 30px;
     font-weight: bold;
     background-color: rgb(63, 230, 174);
-    transition: .3s ease-in-out all;
+    transition: .2s ease-in-out all;
 }
 .enterSth span:hover{
     background-color: rgb(48, 198, 148);
@@ -183,9 +200,114 @@ p{
     padding-bottom: 10px;
     padding-left: 10px;
     font-size: 20px;
-    
+    position: relative; 
 }
 .task label{
     padding-left: 5px;
+}
+.remove-btn{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: .2s ease-in-out all;
+}
+.remove-btn:hover{
+    cursor: pointer;
+    background-color: rgb(201, 0, 0);
+}
+/*=========FAQs accordion Frontend Mentor Challenge=================*/
+.image-container {
+    height: 300px;
+    width: 80%;
+    background-color: #fff;
+    background-image: url(img/faq.webp); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.containerContent .image-container:first-child{
+    background-image: url(img/calculator.png); 
+
+}
+
+.image-container::after, .image-container-calculator::after,
+.image-container-tictactoe::after {
+    content: 'Check project';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #B15EFF;
+    position: absolute;
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover::after, .image-container-calculator:hover::after,
+.image-container-tictactoe:hover::after{
+    cursor: pointer;
+    opacity: 0.4;
+    animation: fadeIn 0.3s ease-in-out; /* Dodaj animację fadeIn */
+}
+
+.image-container-calculator{
+    height: 300px;
+    width: 80%;
+    background-color: #fff;
+    background-image: url(img/calculator.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.image-container-tictactoe{
+    height: 300px;
+    width: 80%;
+    background-color: #fff;
+    background-image: url(img/tictactoe.PNG); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+
+
+footer{
+    height: 7svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    margin: 0 5px 0 5px;
 }
 
