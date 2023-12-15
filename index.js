@@ -50,13 +50,23 @@ add.addEventListener('click',()=>{
         taskDiv.classList.add('task');
         label.textContent = taskText;
         // taskDiv.textContent = taskText;
+        let removeBtn = document.createElement('button');
+        removeBtn.innerText = "x";
+        removeBtn.classList.add("remove-btn");
+        
 
         
         taskDiv.appendChild(checkbox);
         taskDiv.appendChild(label);
+        taskDiv.appendChild(removeBtn);
         taskArea.appendChild(taskDiv);
         
 
         taskInput.value = '';
+
+        removeBtn.addEventListener('click', ()=>{
+            taskArea.removeChild(taskDiv);
+        })
     }
+    
 });

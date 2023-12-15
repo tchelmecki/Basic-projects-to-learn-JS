@@ -3,16 +3,53 @@
     padding: 0;
     box-sizing: border-box;
 }
-.containerForAll{
-    display: flex;
-    
+html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
+body{
+    background-color: #FFA33C;
+}
+nav{
+    height: 8svh;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+}
+nav p{
+    margin-left: 4%;
+}
+.containerForAll{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px 20px;
+    justify-items: center;
+}
+
+
+.containerContent{
+    background-color: #B15EFF;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 p{
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     padding-bottom: 15px;
 }
+
+/*====================COLOR PICKER====================*/
 .colorPickerContainer{
     width: 300px;
     display: flex;
@@ -25,7 +62,7 @@ p{
     width: 300px;
     height: 300px;
     background-color: white;
-    border: 2px dotted black;
+    /* border: 2px dotted black; */
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -35,13 +72,13 @@ p{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 50px;
     width: 300px;
     height: 400px;
     /* background-color: rgb(148, 112, 112); */
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
+    
 }
 
 .counterContainer span{
@@ -54,12 +91,13 @@ p{
 
 }
 .counterContainer button{
-    width: 75px;
+    width: 100px;
     height: 28px;
-    border: 1px solid black;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFA33C;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 15px;
+    border: none;
+    color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: .3s ease-in-out all;
 }
@@ -136,9 +174,60 @@ p{
     padding-bottom: 10px;
     padding-left: 10px;
     font-size: 20px;
-    
+    position: relative;
 }
 .task label{
     padding-left: 5px;
 }
 
+.remove-btn{
+    width: 30px;
+    height: 25px;
+    background-color: red;
+    border: none;
+    position: absolute;
+    right: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .3s ease-in-out all;
+}
+
+.remove-btn:hover{
+    cursor: pointer;
+    background-color: rgb(211, 0, 0);
+}
+
+/*====================IMAGE CONTAINER====================*/
+.image-container{
+    width: 78%;
+    height: 73%;
+    background-image: url(img/faq.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.image-container:hover{
+    cursor: pointer;
+    opacity: 90%;
+}
+
+
+
+/*====================FOOTER====================*/
+footer{
+    width: 100%;
+    height: 7svh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFB73;
+}
+footer a{
+  
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #000;
+}
