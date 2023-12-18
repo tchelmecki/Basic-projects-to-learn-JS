@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic projects - JavaScript</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+       $(document).ready(function(){
+        $('section').click(function() {
+            $(this).next().slideToggle('slow');
+            return false;
+        }).next().hide();
+        });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <nav><p>Catalog of basic projects - JavaScript</p></nav>
+    <nav><span><p><a href="">Catalog of projects</a></p> <p>JavaScript</p> <p>React.JS</p> <p>React Native</p> <p>Java</p></span>
+    </nav>
+    <!-- JAVASCRIPT -->
+    <section>
+        <p>JavaScript </p><span class="arrow"><ion-icon  name="chevron-forward-outline"></ion-icon></span>
+    </section>
     <div class="containerForAll">
 
     <div class="containerContent">
@@ -45,14 +61,18 @@
     </div>
     </div>
 
+
     <div class="containerContent">
-        <p>FAQ accordion Frontend-Mentor</p>
-        <a class="image-container" href="https://tchelmecki.github.io/FAQ-accordion---Frontend-Mentor/">
+        <p>Rock, paper, scissors</p>
+        <a class="image-container-rps" href="https://tchelmecki.github.io/Rock-Paper-Scissors/">
 
         </a>
-        <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/FAQ-accordion---Frontend-Mentor">repository</a></span>
-
+        <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/Rock-Paper-Scissors">repository</a></span>
+    
     </div>
+
+
+   
 
     <div class="containerContent">
         <p>Calculator</p>
@@ -72,10 +92,102 @@
     
     </div>
 
+    <div class="containerContent">
+        <p>FAQ accordion Frontend-Mentor</p>
+        <a class="image-container" href="https://tchelmecki.github.io/FAQ-accordion---Frontend-Mentor/">
+
+        </a>
+        <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/FAQ-accordion---Frontend-Mentor">repository</a></span>
+
+    </div>
+
+    <div class="containerContent">
+        <p>MediaMarket-webstore</p>
+        <a class="image-container-media-market" href="https://tchelmecki.github.io/MediaMarket-webstore/">
+
+        </a>
+        <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/MediaMarket-webstore">repository</a></span>
+    
+    </div>
+
+    
+
+
+
 
 
 
     </div>
+
+    <!-- REACT.JS -->
+    <section>
+        <p>React.JS</p><span class="arrow"><ion-icon  name="chevron-forward-outline"></ion-icon></span>
+    </section>
+
+
+
+    <div class="containerForAll">
+
+        <div class="containerContent">
+            <p>Tic-tac-toe </p>
+            <a class="image-container-xo-react-native" href="https://tchelmecki.github.io/FAQ-accordion---Frontend-Mentor/">
+    
+            </a>
+            <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/TicTacToeReactNative">repository</a></span>
+    
+        </div>
+    
+    </div>
+
+
+
+    <!-- REACT NATIVE -->
+
+    <section>
+        <p>React.Native</p><span class="arrow"><ion-icon  name="chevron-forward-outline"></ion-icon></span>
+    </section>
+
+
+
+
+    <div class="containerForAll">
+
+        <div class="containerContent">
+            <p>Tic-tac-toe </p>
+            <a class="image-container-xo-react-native" href="https://tchelmecki.github.io/FAQ-accordion---Frontend-Mentor/">
+    
+            </a>
+            <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/TicTacToeReactNative">repository</a></span>
+    
+        </div>
+    
+    </div>
+
+
+
+
+        <!-- JAVA -->
+    <section>
+        <p>Java</p><span class="arrow"><ion-icon  name="chevron-forward-outline"></ion-icon></span>
+    </section>
+
+    <div class="containerForAll">
+
+        <div class="containerContent">
+            <p>Tic-tac-toe </p>
+            <a class="image-container" href="https://tchelmecki.github.io/FAQ-accordion---Frontend-Mentor/">
+    
+            </a>
+            <span class="repository"><ion-icon class="icon-github" name="logo-github"></ion-icon> <a href="https://github.com/tchelmecki/FAQ-accordion---Frontend-Mentor">repository</a></span>
+    
+        </div>
+    
+      
+    </div>
+
+
+    
+    
     <footer>Coded by <a href="https://github.com/tchelmecki">Tomasz Chełmecki </a> 2023 </footer>
 
 

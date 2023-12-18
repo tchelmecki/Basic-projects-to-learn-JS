@@ -5,23 +5,79 @@
 }
 html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    color: #fff;
 }
 body{
-    background-color: #FFA33C;
+    background-color: #C08261;
 }
 nav{
-    height: 8svh;
+    height: 12svh;
     width: 100%;
     font-weight: bold;
     font-size: 20px;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+nav span{
+    height: 100%;
+    display: flex;
+    background-color: #9A3B3B;
     align-items: center;
-
 }
 nav p{
-    margin-left: 4%;
+    padding-left: 70px;
 }
+nav span p{
+    padding-left: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: .3s ease-in-out all;
+
+}
+nav p:not(:first-child,.element)::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: -2px;
+    animation: navIn 0.3s ease-in-out;
+}
+nav p:not(:first-child,.element):hover::after{
+    display: flex;
+    width: 70%;
+    cursor: pointer;
+    color: #F2ECBE;
+    justify-content: center;
+}
+
+nav p:not(:first-child,.element):hover{
+    cursor: pointer;
+    color: #F2ECBE;
+}
+
+nav p a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 27px;
+}
+
+@keyframes navIn {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+
 .containerForAll{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -31,7 +87,7 @@ nav p{
 
 
 .containerContent{
-    background-color: #B15EFF;
+    background-color: #9A3B3B;
     width: 500px;
     height: 500px;
     display: flex;
@@ -44,7 +100,7 @@ nav p{
 .repository{
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .repository a{
     color: #fff;
@@ -56,7 +112,7 @@ nav p{
     color: #fff;
 }
 
-p{
+.containerContent p{
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -116,7 +172,7 @@ p{
 .counterContainer button{
     width: 100px;
     height: 28px;
-    background-color: #FFA33C;
+    background-color: #C08261;
     border-radius: 10px;
     font-size: 15px;
     border: none;
@@ -240,29 +296,30 @@ p{
 }
 
 .image-container::after, .image-container-calculator::after,
-.image-container-tictactoe::after {
+.image-container-tictactoe::after, .image-container-xo-react-native::after,
+.image-container-media-market::after, .image-container-rps:hover::after {
     content: 'Check project';
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #000;
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: #B15EFF;
+    background-color: #E2C799;
     position: absolute;
     bottom: 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-
+    border-radius: 10px;
+    border-radius: 10px;
     transition: opacity 0.3s ease-in-out;
 }
 
 .image-container:hover::after, .image-container-calculator:hover::after,
-.image-container-tictactoe:hover::after{
+.image-container-tictactoe:hover::after, .image-container-xo-react-native:hover::after,
+.image-container-media-market:hover::after, .image-container-rps:hover::after{
     cursor: pointer;
-    opacity: 0.4;
+    opacity: 0.8;
     animation: fadeIn 0.3s ease-in-out; /* Dodaj animację fadeIn */
 }
 
@@ -290,16 +347,67 @@ p{
     position: relative;
 }
 
+.image-container-xo-react-native{
+    height: 300px;
+    width: 80%;
+    background-color: #000;
+    background-image: url(img/xoReactNative.png); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.image-container-media-market{
+    height: 300px;
+    width: 80%;
+    background-color: #fff;
+    background-image: url(img/media-market.png); 
+    background-repeat: no-repeat;
+    background-size: 380px 230px;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.image-container-rps{
+    height: 300px;
+    width: 80%;
+    background-color: #fff;
+    background-image: url(img/rps.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
-        opacity: 0.4;
+        opacity: 0.8;
     }
 }
 
+/*=====================SECTION========================*/
+section{
+    width: 100%;
+    height: 10svh;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+}
 
+
+section p:hover {
+    cursor: pointer;
+}
 
 footer{
     height: 7svh;
@@ -309,5 +417,6 @@ footer{
 }
 footer a{
     margin: 0 5px 0 5px;
+    color: #9A3B3B;
 }
 
